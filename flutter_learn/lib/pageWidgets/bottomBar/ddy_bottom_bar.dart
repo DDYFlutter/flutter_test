@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_app/pageWidgets/chats/main_chats.dart';
-import 'package:flutter_app/pageWidgets/contacts/main_contacts.dart';
-import 'package:flutter_app/pageWidgets/find/main_find.dart';
-import 'package:flutter_app/pageWidgets/mine/main_mine.dart';
+import 'package:flutter_learn/pageWidgets/chats/main_chats.dart';
+import 'package:flutter_learn/pageWidgets/contacts/main_contacts.dart';
+import 'package:flutter_learn/pageWidgets/find/main_find.dart';
+import 'package:flutter_learn/pageWidgets/mine/main_mine.dart';
 
 class DDYBottomBar extends StatefulWidget {
   @override

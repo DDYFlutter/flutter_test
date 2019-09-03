@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_app/testFiles/test_class.dart';
-import 'package:flutter_app/testFiles/test_type.dart';
-import 'package:flutter_app/testFiles/test_function.dart';
+import 'package:flutter_learn/testFiles/test_class.dart';
+import 'package:flutter_learn/testFiles/test_type.dart';
+import 'package:flutter_learn/testFiles/test_function.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key, this.title}) : super(key: key);
