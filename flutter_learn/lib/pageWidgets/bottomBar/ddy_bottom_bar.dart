@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:io';
 
 import 'package:flutter_learn/pageWidgets/chats/main_chats.dart';
 import 'package:flutter_learn/pageWidgets/contacts/main_contacts.dart';
@@ -57,26 +58,16 @@ class _tabbarState extends State<DDYBottomBar> {
 
   @override
   Widget build(BuildContext context) {
-    var student1 = const Student('LiLei', 18);
-    var student2 = const Student('LiLei', 18);
-    var student3 = Student('LiLei', 18);
-    // identical(obj1, obj2) 比较是否一个对象
-    print(identical(student1, student2)); // true
-    print(identical(student1, student3)); // false
-    print(student1 == student2); // true
-    print(student1 == student3); // false
 
-    const studentClass1 = [Student('LiLei', 18), Student('LiLei', 18)];
-    print('${studentClass1[0] == studentClass1[1]}'); // true
-    print('${identical(studentClass1[0], studentClass1[1])}'); // ture
-    // 等于了 const studentClass = const [const Student('LiLei', 18), const Student('LiLei', 18)];
+    var ScreenSize = MediaQuery.of(context).size;
+    var StatusHeight = MediaQuery.of(context).padding.top;
+    print('$ScreenSize $StatusHeight'); // Size(375.0, 667.0) 20.0
 
-    var studentClass2 = const [Student('LiLei', 18), Student('LiLei', 18)];
-    print('${studentClass2[0] == studentClass2[1]}'); // true
-    print('${identical(studentClass2[0], studentClass2[1])}'); // ture
-
-    print(studentClass1 == studentClass2); // ture
-    print(identical(studentClass1, studentClass2)); // ture
+   if ( Platform.isIOS) {
+     print("iOS Platform");
+   } else {
+     print("Other Platform");
+   }
 
     return Scaffold(body: _buildBody(), bottomNavigationBar: _buildBottomBar(),);
   }
@@ -111,11 +102,6 @@ class _tabbarState extends State<DDYBottomBar> {
     print(date4); // 2022-01-01 00:00:00.000Z
     print(date5); // 2000-01-01 00:00:00.000Z
     print(date6); // 2001-01-01 00:00:00.000Z
-
-    var ScreenSize = MediaQuery.of(context).size;
-    var StatusHeight = MediaQuery.of(context).padding.top;
-    print('$ScreenSize $StatusHeight');
-
   }
 }
 
@@ -165,3 +151,28 @@ class Student {
   const Student(this.name, this.age);
 }
 
+class TestConstClassMethod {
+  startTest() {
+
+    var student1 = const Student('LiLei', 18);
+    var student2 = const Student('LiLei', 18);
+    var student3 = Student('LiLei', 18);
+    // identical(obj1, obj2) 比较是否一个对象
+    print(identical(student1, student2)); // true
+    print(identical(student1, student3)); // false
+    print(student1 == student2); // true
+    print(student1 == student3); // false
+
+    const studentClass1 = [Student('LiLei', 18), Student('LiLei', 18)];
+    print('${studentClass1[0] == studentClass1[1]}'); // true
+    print('${identical(studentClass1[0], studentClass1[1])}'); // ture
+    // 等于了 const studentClass = const [const Student('LiLei', 18), const Student('LiLei', 18)];
+
+    var studentClass2 = const [Student('LiLei', 18), Student('LiLei', 18)];
+    print('${studentClass2[0] == studentClass2[1]}'); // true
+    print('${identical(studentClass2[0], studentClass2[1])}'); // ture
+
+    print(studentClass1 == studentClass2); // ture
+    print(identical(studentClass1, studentClass2)); // ture
+  }
+}
