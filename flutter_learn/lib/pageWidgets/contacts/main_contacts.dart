@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_learn/testFiles/test_class.dart';
 import 'package:flutter_learn/testFiles/test_type.dart';
 import 'package:flutter_learn/testFiles/test_function.dart';
+import 'package:flutter_learn/testFiles/test_tips.dart';
+import 'package:flutter_learn/testFiles/test_network.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key, this.title}) : super(key: key);
@@ -17,6 +19,13 @@ class _homePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+
+//    var testType = new TestType().startTest();
+//    var testFunc = new TestFunction().startTest();
+//    var testClass = new TestClass().startTest();
+//    var testTips = new TestTips().startTest(context);
+  var testNetwork = new TestNetwork().startTest();
+
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
