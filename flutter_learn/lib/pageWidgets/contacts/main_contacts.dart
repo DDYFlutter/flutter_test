@@ -6,6 +6,7 @@ import 'package:flutter_learn/testFiles/test_function.dart';
 import 'package:flutter_learn/testFiles/test_tips.dart';
 import 'package:flutter_learn/testFiles/test_network.dart';
 import 'package:flutter_learn/testFiles/test_operator.dart';
+import 'package:flutter_learn/testFiles/test_future.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key, this.title}) : super(key: key);
@@ -25,8 +26,9 @@ class _homePageState extends State<HomePage> {
 //    var testFunc = new TestFunction().startTest();
 //    var testClass = new TestClass().startTest();
 //    var testTips = new TestTips().startTest(context);
-  var testNetwork = new TestNetwork().startTest();
-  var testOperator = new TestOperator().startTest();
+//  var testNetwork = new TestNetwork().startTest();
+//  var testOperator = new TestOperator().startTest();
+  var testFuture = new TestFuture().startTest();
 
     return Scaffold(
       appBar: AppBar(
