@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_learn/testFiles/test_class.dart';
+import 'package:flutter_learn/testFiles/test_exception.dart';
 import 'package:flutter_learn/testFiles/test_type.dart';
 import 'package:flutter_learn/testFiles/test_function.dart';
 import 'package:flutter_learn/testFiles/test_tips.dart';
@@ -26,9 +27,10 @@ class _homePageState extends State<HomePage> {
 //    var testFunc = new TestFunction().startTest();
 //    var testClass = new TestClass().startTest();
 //    var testTips = new TestTips().startTest(context);
-//  var testNetwork = new TestNetwork().startTest();
 //  var testOperator = new TestOperator().startTest();
+  var testException = new TestException().startTest();
   var testFuture = new TestFuture().startTest();
+  var testNetwork = new TestNetwork().startTest();
 
     return Scaffold(
       appBar: AppBar(
