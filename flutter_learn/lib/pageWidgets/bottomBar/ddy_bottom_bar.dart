@@ -19,7 +19,7 @@ class _tabbarState extends State<DDYBottomBar> {
   /// 按钮图标
   final _itemIconList = ['chats', 'contacts', 'find', 'mine'];
   /// 主体页面
-  final _bodyPageList = [HomePage(title: "聊天"), HomePage(title: "通讯录"), HomePage(title: "发现"), HomePage(title: "我的")];
+  final _bodyPageList = [ChatsPage(title: "聊天"), HomePage(title: "通讯录"), HomePage(title: "发现"), HomePage(title: "我的")];
 
   /// 构建按钮
   BottomNavigationBarItem _buildBottomBarItem(int index) {
