@@ -10,9 +10,10 @@ import 'package:flutter_learn/testFiles/test_operator.dart';
 import 'package:flutter_learn/testFiles/test_future.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({Key key, this.title}) : super(key: key);
 
   final String title;
+
+  HomePage({Key key, this.title}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() => _homePageState();
