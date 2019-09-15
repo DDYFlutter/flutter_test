@@ -9,17 +9,17 @@ import 'package:flutter_learn/testFiles/test_network.dart';
 import 'package:flutter_learn/testFiles/test_operator.dart';
 import 'package:flutter_learn/testFiles/test_future.dart';
 
-class HomePage extends StatefulWidget {
+class ContactsPage extends StatefulWidget {
 
-  final String title;
+  String title;
 
-  HomePage({Key key, this.title}) : super(key: key);
+  ContactsPage({Key key, this.title}) : super(key: key);
 
   @override
-  State<StatefulWidget> createState() => _homePageState();
+  State<StatefulWidget> createState() => _ContactsPageState();
 }
 
-class _homePageState extends State<HomePage> {
+class _ContactsPageState extends State<ContactsPage> {
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +44,8 @@ class _homePageState extends State<HomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text(
-                'You have pushed the button this many times:',
+                '这是一个不能选择的文本\nThis is not a SelectableText',
+                style: TextStyle(fontSize: 25.0),
               ),
             ],
           ),

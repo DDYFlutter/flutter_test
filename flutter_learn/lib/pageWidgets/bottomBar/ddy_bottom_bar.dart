@@ -19,7 +19,7 @@ class _tabbarState extends State<DDYBottomBar> {
   /// 按钮图标
   final _itemIconList = ['chats', 'contacts', 'find', 'mine'];
   /// 主体页面
-  final _bodyPageList = [ChatsPage(title: "聊天"), HomePage(title: "通讯录"), HomePage(title: "发现"), HomePage(title: "我的")];
+  final _bodyPageList = [ChatsPage(title: "聊天"), ContactsPage(title: "通讯录"), FindPage(title: "发现"), MinePage(title: "我的")];
 
   /// 构建按钮
   BottomNavigationBarItem _buildBottomBarItem(int index) {
@@ -27,7 +27,7 @@ class _tabbarState extends State<DDYBottomBar> {
     var isSelect = index == _selectedIndex;
     var itemText = _itemIconList[index];
     var itemIcon = 'image/main_tab_' + '${_itemIconList[index]}' + '${isSelect ? '_pre.png' : '_nor.png'}';
-    var itemSize = isSelect ? 37.0 : 34.0;
+    var itemSize = isSelect ? 34.0 : 34.0;
     var itemColor = isSelect ? Colors.cyan : Colors.grey;
 
     return BottomNavigationBarItem(
@@ -39,9 +39,12 @@ class _tabbarState extends State<DDYBottomBar> {
   Widget _buildBottomBar() {
     return BottomNavigationBar(
       items: [_buildBottomBarItem(0), _buildBottomBarItem(1), _buildBottomBarItem(2), _buildBottomBarItem(3)],
-      type: BottomNavigationBarType.fixed,
+      type: BottomNavigationBarType.shifting,
       onTap: _onTapToSelectItem,
       currentIndex: _selectedIndex,
+      elevation: 10.0,
+      showSelectedLabels: true,
+      showUnselectedLabels: true,
     );
   }
 
