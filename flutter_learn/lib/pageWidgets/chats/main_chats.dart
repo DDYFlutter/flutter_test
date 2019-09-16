@@ -5,6 +5,7 @@ import 'package:vector_math/vector_math_64.dart' as ddyVector;
 
 import 'package:flutter_learn/pageWidgets/qrcode/qrcode_scanner.dart';
 import 'dart:math';
+import 'package:flutter_learn/testFiles/test_listview.dart';
 
 class ChatsPage extends StatefulWidget {
   String title;
@@ -42,6 +43,7 @@ class _ChatsPageState extends State<ChatsPage> {
     items.add(_buildPopupMenu(Icons.message, '发起聊天', '1'));
     items.add(_buildPopupMenu(Icons.group_add, '添加朋友', '2'));
     items.add(_buildPopupMenu(Icons.crop_free, '扫一扫', '3'));
+    items.add(_buildPopupMenu(Icons.list, 'ListView', '4'));
     return items;
   }
 
@@ -80,6 +82,9 @@ class _ChatsPageState extends State<ChatsPage> {
                 break;
               case '3':
                 pushQRCodeScannerWithCustomAnimation2();
+                break;
+              case '4':
+                pushListView();
                 break;
             }
           },
@@ -231,5 +236,9 @@ class _ChatsPageState extends State<ChatsPage> {
         ),
       );
     });
+  }
+  
+  pushListView() {
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => TestListView()));
   }
 }
