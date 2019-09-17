@@ -148,6 +148,7 @@ class _TestListViewState6 extends State<TestListView> {
       body: ListView.custom(
         childrenDelegate: SliverChildBuilderDelegate((context, index) {
           return Container(
+            height: 50,
             alignment: Alignment.center,
             color: Colors.deepPurple[100*Random().nextInt(2)+100],
             child: Text(cities[index], style: TextStyle(color: Colors.red), maxLines: 7,),
