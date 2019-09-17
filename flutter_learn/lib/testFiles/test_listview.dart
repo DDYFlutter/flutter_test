@@ -137,7 +137,7 @@ class _TestListViewState5 extends State<TestListView> {
 
 class _TestListViewState6 extends State<TestListView> {
 
-  final cities = ['BeiJing', 'ShangHai', 'ChongQing', 'HeFei', 'HanDan', 'JiLin', 'BaoDing', 'ShenYang', 'ZhengZhou', 'LaSa',
+  final cities = ['BeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJingBeiJing', 'ShangHai', 'ChongQing', 'HeFei', 'HanDan', 'JiLin', 'BaoDing', 'ShenYang', 'ZhengZhou', 'LaSa',
     'ChangChun', 'GuiYange', 'KunMing', 'TaiYuan', 'ChengDu', 'JiNan', 'QingDao', 'MoHe', 'TengChong', 'ShenZhen', 'TianJin',
     'SuZhou', 'CangZhou', 'MianYang'];
 
@@ -148,10 +148,10 @@ class _TestListViewState6 extends State<TestListView> {
       body: ListView.custom(
         childrenDelegate: SliverChildBuilderDelegate((context, index) {
           return Container(
-            height: 60.0,
             alignment: Alignment.center,
             color: Colors.deepPurple[100*Random().nextInt(2)+100],
-            child: Text(cities[index], style: TextStyle(color: Colors.red),),
+            child: Text(cities[index], style: TextStyle(color: Colors.red), maxLines: 7,),
+            constraints: BoxConstraints(minHeight: 50, maxHeight: 300),
           );
         },
           childCount: cities.length,
