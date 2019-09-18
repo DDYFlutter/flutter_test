@@ -50,7 +50,11 @@ class _tabbarState extends State<DDYBottomBar> {
 
   /// 构建主体页面
   Widget _buildBody() {
-    return _bodyPageList[_selectedIndex];
+    // return _bodyPageList[_selectedIndex];
+    return IndexedStack(
+      index: _selectedIndex,
+      children: _bodyPageList,
+    );
   }
 
   /// 点击事件回调
