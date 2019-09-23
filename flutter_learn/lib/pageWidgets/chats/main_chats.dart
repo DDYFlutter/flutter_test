@@ -6,7 +6,6 @@ import 'package:vector_math/vector_math_64.dart' as ddyVector;
 import 'package:flutter_learn/pageWidgets/qrcode/qrcode_scanner.dart';
 import 'dart:math';
 import 'package:flutter_learn/testFiles/test_listview.dart';
-import 'package:flutter_learn/pageWidgets/chats/main_left_drawer.dart';
 
 class ChatsPage extends StatefulWidget {
   String title;
@@ -14,9 +13,7 @@ class ChatsPage extends StatefulWidget {
   ChatsPage({Key key, this.title}) : super(key: key);
 
   @override
-  State<StatefulWidget> createState() {
-    return _ChatsPageState();
-  }
+  State<StatefulWidget> createState() => _ChatsPageState();
 }
 
 class _ChatsPageState extends State<ChatsPage> {
@@ -138,11 +135,23 @@ class _ChatsPageState extends State<ChatsPage> {
       appBar: _buildAppBar(),
       body: _buildListView(),
       //drawer: _buildLeftDrawer(),
-      drawer: MainLeftDrawer.leftDrawer(),
     );
   }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class _ChatsPageState1 extends State<ChatsPage> {
   // 下拉菜单

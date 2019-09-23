@@ -4,6 +4,7 @@ import 'package:flutter_learn/pageWidgets/chats/main_chats.dart';
 import 'package:flutter_learn/pageWidgets/contacts/main_contacts.dart';
 import 'package:flutter_learn/pageWidgets/find/main_find.dart';
 import 'package:flutter_learn/pageWidgets/mine/main_mine.dart';
+import 'package:flutter_learn/pageWidgets/leftDrawer/main_left_drawer.dart';
 
 class DDYBottomBar extends StatefulWidget {
   @override
@@ -20,6 +21,8 @@ class _tabbarState extends State<DDYBottomBar> {
   final _itemIconList = ['chats', 'contacts', 'find', 'mine'];
   /// 主体页面
   final _bodyPageList = [ChatsPage(title: "聊天"), ContactsPage(title: "通讯录"), FindPage(title: "发现"), MinePage(title: "我的")];
+
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
   /// 构建按钮
   BottomNavigationBarItem _buildBottomBarItem(int index) {
@@ -64,7 +67,12 @@ class _tabbarState extends State<DDYBottomBar> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: _buildBody(), bottomNavigationBar: _buildBottomBar(),);
+    return Scaffold(
+      key: _scaffoldKey,
+      body: _buildBody(),
+      bottomNavigationBar: _buildBottomBar(),
+      drawer: LeftDrawerPage(),
+    );
   }
 }
 
