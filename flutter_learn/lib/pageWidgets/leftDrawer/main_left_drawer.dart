@@ -9,14 +9,60 @@ class _LeftDrawePageState extends State<LeftDrawerPage> {
 
   _buildHeader() {
 
-    _buildDrawerHeader1() {
+    var _avatar = Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
+        shape: BoxShape.circle,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.3),
+            offset: Offset(0, 0),
+            blurRadius: 3.0,
+            spreadRadius: 0.5,
+          ),
+        ],
+      ),
+      width: 70,
+      height: 70,
+      child: Padding(
+        padding: EdgeInsets.all(3.0),
+        child: CircleAvatar(
+          backgroundImage: AssetImage("image/RainDou.gif"),
+        ),
+      ),
+    );
 
-    }
+    var _userName = Padding(
+      padding: EdgeInsets.symmetric(vertical: 10),
+      child: Text('豆电雨', style: TextStyle(color: Colors.white, fontSize: 20,),),
+    );
 
-    return Row(
+    var _emailView = Text('634778311@qq.com', style: TextStyle(color: Colors.white, fontSize: 15,),);
+
+    var _content = Column(
       mainAxisSize: MainAxisSize.min,
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: <Widget>[
+        SizedBox(height: 50,),
+        _avatar,
+        _userName,
+        _emailView,
+        SizedBox(height: 20,),
+      ],
+    );
+
+    var _background = BoxDecoration(
+      gradient: LinearGradient(
+        colors: [Colors.teal.shade300, Colors.blue.shade600, Colors.red.shade100],
+        begin: Alignment.topLeft,
+        end: Alignment.bottomRight,
+      ),
+    );
+
+    return Container(
+      decoration: _background,
+      child: _content,
     );
   }
 
@@ -56,7 +102,7 @@ class _LeftDrawePageState extends State<LeftDrawerPage> {
         //ListView padding 不为空的时候，Drawer顶部的状态栏就不会有灰色背景
         padding: EdgeInsets.zero,
         children: <Widget>[
-          _buildDrawerHeader(),
+          _buildHeader(),
 
           ///功能列表
           ListTile(
