@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learn/pageWidgets/qrcode/qrcode_generator.dart';
-import 'dart:ui';
 import 'package:vector_math/vector_math_64.dart' as ddyVector;
 
-import 'package:flutter_learn/pageWidgets/qrcode/qrcode_scanner.dart';
+import 'dart:ui';
 import 'dart:math';
+
+import 'package:flutter_learn/pageWidgets/qrcode/qrcode_generator.dart';
+import 'package:flutter_learn/pageWidgets/qrcode/qrcode_scanner.dart';
 import 'package:flutter_learn/testFiles/test_listview.dart';
+import 'package:flutter_learn/pageWidgets/dialog/global_dialog.dart';
 
 class ChatsPage extends StatefulWidget {
   String title;
@@ -13,7 +15,7 @@ class ChatsPage extends StatefulWidget {
   ChatsPage({Key key, this.title}) : super(key: key);
 
   @override
-  State<StatefulWidget> createState() => _ChatsPageState();
+  State<StatefulWidget> createState() => _ChatsPageState1();
 }
 
 class _ChatsPageState extends State<ChatsPage> {

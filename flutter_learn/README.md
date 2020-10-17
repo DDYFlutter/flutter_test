@@ -1,6 +1,6 @@
 # flutter_learn
 
-Flutter Test
+A new Flutter application.
 
 ## Getting Started
 

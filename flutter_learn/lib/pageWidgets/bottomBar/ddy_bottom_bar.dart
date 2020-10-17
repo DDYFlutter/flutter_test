@@ -30,7 +30,7 @@ class _tabbarState extends State<DDYBottomBar> {
     var isSelect = index == _selectedIndex;
     var itemText = _itemIconList[index];
     var itemIcon = 'image/main_tab_' + '${_itemIconList[index]}' + '${isSelect ? '_pre.png' : '_nor.png'}';
-    var itemSize = isSelect ? 34.0 : 34.0;
+    var itemSize = isSelect ? 32.0 : 32.0;
     var itemColor = isSelect ? Colors.cyan : Colors.grey;
 
     return BottomNavigationBarItem(
@@ -42,10 +42,10 @@ class _tabbarState extends State<DDYBottomBar> {
   Widget _buildBottomBar() {
     return BottomNavigationBar(
       items: [_buildBottomBarItem(0), _buildBottomBarItem(1), _buildBottomBarItem(2), _buildBottomBarItem(3)],
-      type: BottomNavigationBarType.shifting,
+      type: BottomNavigationBarType.fixed,
       onTap: _onTapToSelectItem,
       currentIndex: _selectedIndex,
-      elevation: 10.0,
+      elevation: 0.0,
       showSelectedLabels: true,
       showUnselectedLabels: true,
     );
